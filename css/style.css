@@ -1,14 +1,13 @@
 /* =================================
 ------------------------------------
-  Cryptocurrency - Landing Page
-  Version: 1.0
+  Cryptrey
  ------------------------------------ 
  ====================================*/
 
 
 
 /*----------------------------------------*/
-/* Template default CSS
+/* Default CSS
 /*----------------------------------------*/
 
 @font-face {
@@ -30,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #20509e;
+	color: #46209e;
 	margin: 0;
 	font-weight: 500;
 	font-family: "Futura", sans-serif;
@@ -342,7 +341,7 @@ ol {
 	height: 900px;
 	padding-top: 260px;
 	display: block;
-	background-image: url("../img/hero-bg.png");
+	background-image: url("../img/hero-bg.jpg");
 	background-size: cover;
 	background-color: #f3f7f9;
 	background-position: right top;
