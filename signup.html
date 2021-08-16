@@ -37,64 +37,49 @@
 		<div class="loader"></div>
 	</div>
 
-	<!-- Header section -->
-	<header class="header-section clearfix">
-		<div class="container-fluid">
-			<a href="index.html" class="site-logo">
-				<img src="img/logo.png" alt="">
-			</a>
-			
-			<nav class="main-menu">
-                
-				<ul class="menu-list">
-					<li><a href="">Buy & Sell</a></li>
-					<li><a href="">Features</a></li>
-					<li><a href="">News</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
-                    <div class="responsive-bar"><i class="fa fa-bars"></i></div>
-                        <a href="" class="user"><i class="fa fa-user"></i></a>
-                        <a href="signup.html" class="site-btn">Sign Up</a>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<!-- Header section end -->
+	
 
 
-    <!-- Form containing a signup form-->
-    <div class="signup-form">
+    <!-- Sign up form -->
+    <section class="signup">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <div class="signup-form-header">
-                        <h2>Sign Up</h2>
-                    </div>
-                    <div class="signup-form-body">
-                        <form action="signup.php" method="post">
-                            <div class="form-group">
-                                <input type="text" name="username" class="form-control" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="password" class="form-control" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm Password">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="email" class="form-control" placeholder="Email">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="signup-form-footer">
-                        <a href="index.html" class="btn btn-default">Cancel</a>
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
-                    </div>
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="POST" class="register-form" id="register-form">
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="name" id="name" placeholder="Your Name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input type="email" name="email" id="email" placeholder="Your Email"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="pass" id="pass" placeholder="Password"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                            <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="images_signup/signup-image.jpg" alt="sing up image"></figure>
+                    <a href="#" class="signup-image-link">I am already member</a>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Form containing a signup form end -->
+    </section>
+    <!-- Sign up form end -->
 
 
 
