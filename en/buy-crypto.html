@@ -78,6 +78,8 @@
     <script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5RX47XK"></script>
+    
+
     <script>
         function fz(obj, prop, value) {
             Object.defineProperty(obj, prop, {
@@ -85,6 +87,7 @@
                 writable: false
             })
         }
+
         fz(window, 'okGlobal', {});
         fz(window, 'okui', {});
         var broker = {
@@ -119,7 +122,9 @@
             win: "https:\/\/ok-public-hk.oss-cn-hongkong.aliyuncs.com\/upgradeapp\/OKEx_Setup.exe",
             mac: "https:\/\/ok-public-hk.oss-cn-hongkong.aliyuncs.com\/upgradeapp\/OKEx.dmg"
         };
+        
         fz(window.okGlobal, 'site', site);
+        /*
         fz(window.okGlobal, 'broker', broker);
         window.okGlobal.locale = "en_US";
         fz(window.okGlobal, 'timestamp', 1629894412505);
@@ -129,6 +134,8 @@
             var l = "\/en" + url;
             isNewTab ? window.open(l) : window.location.href = l;
         });
+
+        */
         fz(window.okGlobal, 'download', download);
         fz(window.okGlobal, 'cdnBaseUrl', "https:\/\/static.okex.com");
         fz(window.okGlobal, 'withoutStatistics', false);
@@ -140,19 +147,24 @@
         window.okGlobal.navShowStatus = true;
         window.okGlobal.isApp = false;
         window.okGlobal.simulatedStatus = "1";
-        fz(window.okGlobal, 'localeMap', JSON.parse("{\"ru_ru\":\"ru\",\"it_it\":\"it\",\"pl_pl\":\"pl\",\"tr_tr\":\"tr\",\"pt_br\":\"pt\",\"th_th\":\"th\",\"fr_fr\":\"fr\",\"in_id\":\"id\",\"de_de\":\"de\",\"zh_hk\":\"\",\"vi_vn\":\"vi\",\"ko_kr\":\"ko\",\"en_us\":\"\",\"en_in\":\"en-in\",\"zh_cn\":\"\",\"es_es\":\"es\"}"));
-        fz(window.okGlobal, 'versionUrls', {
+        fz(window.okGlobal, 'localeMap', JSON.parse("{\"en_us\"}"));
+       /* fz(window.okGlobal, 'versionUrls', {
             expressway: "https:\/\/static.okex.com\/cdn\/assets\/okfe\/expressway\/0.17.49",
             seoEx: "https:\/\/static.okex.com\/cdn\/assets\/okfe\/seo-ex\/6.4.74",
             libs: "https:\/\/static.okex.com\/cdn\/assets\/okfe\/libs"
         });
+        
         fz(window.okGlobal, 'socketBaseUrls', {
             "trade": "wss:\/\/wspri.okex.com:8443",
             "wallet": "wss:\/\/onchainreal.oklink.com:8443"
         });
         fz(window.okGlobal, 'staticVersionUrls', {});
+        */
     </script>
 
+
+
+<!--
     <script>
         var win = window,
             doc = document,
@@ -162,6 +174,7 @@
         win.fetch || doc.write(script.replace(re, 'fetch-polyfill.min.js'));
         win.Promise && Object.assign && ''.includes && [].includes || doc.write(script.replace(re, 'es6-polyfill.min.js'));
     </script>
+-->
 
     <script src="../static.okex.com/cdn/assets/okfe/util/ont/0.4.52/ont.js"></script>
     <script src="../static.okex.com/cdn/assets/okfe/util/monitor/2.4.38/index.js"></script>
