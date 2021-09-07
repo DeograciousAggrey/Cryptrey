@@ -438,6 +438,11 @@
         </div>
     </header>
 
+    <script>
+        var cssVarPonyfillScript = '<script type="text/javascript" src="' + "https:\/\/static.okex.com" + '/cdn/assets/okfe/libs/cssVarsPonyfill/index.js"><\/script>';
+        var isCssNativeSupport = window.CSS && window.CSS.supports && window.CSS.supports('(--a: 0)');
+        !isCssNativeSupport && document.write(cssVarPonyfillScript);
+    </script>
 
 
     <div class="home-container">
@@ -456,35 +461,48 @@
             </div>
 
 
-            <div class="trade-buy" style="">
-                <div class="base">
-                    <div class="taker-cont">
-                        <div class="buy-take-side taker-full"><a class="side side-buy" data-side="buy" href="/en/buy-crypto.html/">Buy</a><a class="side side-sell side-active" data-side="sell" href="/en/sell-crypto.html/">Sell</a></div>
-                        <p class="common-quick-price-lab">2 is roughly</p>
-                        <div class="common-quick-price-value"><span>--<span class="common-quick-price-quote"></span></span></div>
-                        <div class="input-cont common-input-currency-group"><span class="input-label">You sell</span><input class="input product-input" placeholder="0" autocomplete="off" symbol="" type="text" value="">
-                            <div class="currency-select common-quick-currency-select common-select">
-                                <div class="common-select-value">
-                                    <div class="value"></div><i class="icon iconfont icon-fabi_pulldown icon-up"></i>
+            <div class="trade-buy" style>
+                <div class="taker-cont">
+                    <div class="buy-take-side taker-full"><a class="side side-buy side-active" data-side="buy" href="/buy-crypto/usd">Buy</a><a class="side side-sell" data-side="sell" href="/sell-crypto/usd">Sell</a></div>
+                    <p class="common-quick-price-lab">1 USDT is roughly</p>
+                    <div class="common-quick-price-value"><span>1.00<span class="common-quick-price-quote">USD</span></span>
+                        <div class="common-quick-bonus" data-nosnippet="true">
+                            <div class="ok-ui-pop"><span class="ok-ui-pop-placement"><span class="bonus-title">Claim <span class="bonus-amount">$10</span> in <a href="/rewards" style="text-decoration: underline;">Rewards</a>.<img class="color-icon bonus-icon" src="https://static.okex.com/cdn/assets/imgs/MjAyMDM/A1080ECDAB964E8402BD5F62116E9C81.png"></span></span>
+                                <div class="ok-ui-pop-over ok-ui-pop-tip ok-ui-pop-over-left ok-ui-pop-over-top undefined">
+                                    <p class="ok-ui-pop-over-tip"><span class="block tip-text">You first crypto purchase with $100 or more</span><span class="block tip-text">You can claim bitcoin worth of <span class="bonus-amount">$10</span> in Rewards.</span></p><span class="ok-ui-pop-arrow-point arrow-point"></span>
                                 </div>
-                            </div><span class="input-err common-input-error"></span>
-                        </div>
-                        <div class="relative"><span class="common-quick-transfer">-- Available in funding account<span class="common-btn">Transfer</span></span></div><i class="icon iconfont icon-web_link common-quick-icon"></i>
-                        <div class="input-cont common-input-currency-group"><span class="input-label">You receive</span><input class="input product-input" placeholder="0" autocomplete="off" symbol="" type="text" value="">
-                            <div class="currency-select common-quick-currency-select common-select">
-                                <div class="common-select-value">
-                                    <div class="value"></div><i class="icon iconfont icon-fabi_pulldown icon-up"></i>
-                                </div>
-                            </div><span class="input-err common-input-error"></span>
-                        </div>
-                        <div class="common-quick-payment">Receive with</div>
-                        <div class="payment-select-wrap common-select">
-                            <div class="common-select-value">
-                                <div class="value"></div><i class="icon iconfont icon-fabi_pulldown icon-up"></i>
                             </div>
-                        </div><button type="button" class="okui-btn btn-lg btn-fill-primary taker-btn"><span class="btn-content">Sell </span></button>
-                        <p class="common-quick-error"></p>
+                        </div>
                     </div>
+                    <div class="input-cont common-input-currency-group input-cont-err"><span class="input-label">You pay</span><input class="input product-input" precision="2" placeholder="0.00" autocomplete="off" symbol="" type="text" value="">
+                        <div class="currency-select common-quick-currency-select common-select">
+                            <div class="common-select-value">
+                                <div class="value">
+                                    <div class="currency-option-wrap"><img class="img" src="https://static.coinall.ltd/cdn/assets/imgs/206/16F6BF5C73C8BD70.png"><span class="name">USD</span></div>
+                                </div><i class="icon iconfont icon-fabi_pulldown icon-up"></i>
+                            </div>
+                        </div><span class="input-err common-input-error">Limit: 30 - 55,000 USD</span>
+                    </div><i class="icon iconfont icon-web_link common-quick-icon"></i>
+                    <div class="input-cont common-input-currency-group"><span class="input-label">You receive</span><input class="input product-input" precision="2" placeholder="0.00" autocomplete="off" symbol="" type="text" value="">
+                        <div class="currency-select common-quick-currency-select common-select">
+                            <div class="common-select-value">
+                                <div class="value">
+                                    <div class="currency-option-wrap"><img class="img" src="https://static.coinall.ltd/cdn/assets/imgs/MjAyMDM/59C599689B741933F85FFBB09E0273A4.png">
+                                        <div class="currency-section"><span class="name">USDT</span></div>
+                                    </div>
+                                </div><i class="icon iconfont icon-fabi_pulldown icon-up"></i>
+                            </div>
+                        </div><span class="input-err common-input-error"></span>
+                    </div>
+                    <div class="common-quick-payment">Pay with</div>
+                    <div class="payment-select-wrap common-select">
+                        <div class="common-select-value">
+                            <div class="value">
+                                <div class="payment-option"><img src="https://static.coinall.ltd/cdn/assets/imgs/207/FC784BE743659817.png" class="payment-img payment-img-big"><span class="name">Bank Transfer</span><span class="base-price"><span class="f10">Best price</span></span></div>
+                            </div><i class="icon iconfont icon-fabi_pulldown icon-up"></i>
+                        </div>
+                    </div><button type="button" class="okui-btn btn-lg btn-fill-primary taker-btn"><span class="btn-content">Buy USDT</span></button>
+                    <p class="common-quick-error"></p>
                 </div>
                 <div class="introduce">
                     <div class="introduce-inner">
